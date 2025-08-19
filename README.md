@@ -20,8 +20,8 @@ My lecture notes are scanned in as PDF files contributed by myself and are found
 
 ## Exams
 
-* Midterm I, Thurs, Sept 26 
-* Midterm II, Thurs, Nov 14 
+* Midterm I, Tues, Sept 30 
+* Midterm II, Thurs, Nov 13
 * Final, TBA
 
 ## Practice Exams
