@@ -9,6 +9,8 @@ My lecture notes are scanned in as PDF files contributed by myself and are found
 
 ## Homeworks
 
+Homeworks are emailed to kapelner@gmail.com by the time indicated on the PDF.
+
 <!-- * Homework 7 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf) (due 12/14)
 * Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf) (due 11/25)
 * Homework 5 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf) (due 11/11)
@@ -41,7 +43,7 @@ My lecture notes are scanned in as PDF files contributed by myself and are found
 [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final_solutions.pdf) 
 [(exam 1)](https://github.com/kapelner/QC_Math_368_Fall_2021/blob/master/exams/final/final.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_368_Fall_2021/blob/master/exams/final/final_solutions.pdf)
 
-## Recitation Section
+## Optional Recitation Section
 
 Teaching Assistant: Elliot Gangaram
 Time: Lecture days (Tu/Th) 5:15-5:45PM
