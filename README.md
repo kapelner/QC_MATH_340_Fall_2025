@@ -9,7 +9,7 @@ My lecture notes are scanned in as PDF files contributed by myself and are found
 
 ## Homeworks
 
-Homeworks are emailed to kapelner@gmail.com by the time indicated on the PDF.
+Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Gangaram at gangaram340640@gmail.com. For the subject, write "Math [340, 640] HW #[number], [your full name]" where you fill in the brackets appropriately.
 
 <!-- * Homework 7 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf) (due 12/14)
 * Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf) (due 11/25)
