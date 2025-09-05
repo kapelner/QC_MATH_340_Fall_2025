@@ -58,7 +58,7 @@ Location: KY 258
 
 ## Change of Schedule
 
-* There will be a midterm 1 review session on Sunday Sept 28 6-7:50PM on zoom in lieu of the Oct 7 class day I cannot attend.
+* There will be a final review session after classes are over TBA.
 
 
 ## Grades and Class Standing
