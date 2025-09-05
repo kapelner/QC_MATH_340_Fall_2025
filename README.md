@@ -15,8 +15,8 @@ Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Ga
 * Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf) (due 11/25)
 * Homework 5 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf) (due 11/11)
 * Homework 4 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw04/hw04.pdf) (due 10/27)
-* Homework 3 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw03/hw03.pdf) (due 10/6)
-* Homework 2 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw02/hw02.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw02/hw02.pdf) (due 9/22) -->
+* Homework 3 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw03/hw03.pdf) (due 10/6) -->
+* Homework 2 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw02/hw02.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw02/hw02.pdf) (due 9/21)
 * Homework 1 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw01/hw01.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw01/hw01.pdf) (due 9/7)
 
 
