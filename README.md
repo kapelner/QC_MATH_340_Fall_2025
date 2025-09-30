@@ -22,7 +22,7 @@ Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Ga
 
 ## Exams
 
-* Midterm I, Tues, Sept 30 
+* Midterm I, Tues, Sept 30 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1_solutions.pdf)
 * Midterm II, Thurs, Nov 13
 * Final, TBA
 
