@@ -58,6 +58,7 @@ Location: KY 258
 
 ## Change of Schedule
 
+* No class on Tuesday Oct 7
 * There will be a final review session after classes are over TBA.
 
 
