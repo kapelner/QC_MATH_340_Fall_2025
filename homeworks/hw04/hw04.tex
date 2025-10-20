@@ -7,12 +7,12 @@
 
 
 
-\title{MATH 340/640 Fall \the\year~ Homework \#3}
+\title{MATH 340/640 Fall \the\year~ Homework \#4}
 
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due by email 11:59PM October 19, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due by email 11:59PM on the date found on the homepage \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -24,7 +24,7 @@
 \begin{abstract}
 The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
 
-Reading is still \textit{required}. For this homework set, review Math 241 concerning random variables, support, parameter space, PMF's, the central limit theorem (CLT), variance, covariance.
+Reading is still \textit{required}. For this homework set, review Math 241 concerning the exponential.
 
 The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. \qu{[MA]} are for those registered for 621 and extra credit otherwise.
 
@@ -43,171 +43,143 @@ NAME: \line(1,0){380}
 }
 
 
+
+\problem{These exercises will continue to introduce the Multinomial distribution. }
+
+
+\begin{enumerate}
+
+
+\easysubproblem{Consider the following rv for the remaining exercises in this problem:\\ $\X \sim \multinomial{17}{\bracks{0.1~0.2~0.3~0.4}^\top}$. What is $\dime{\X}$?}\spc{0}
+
+
+\intermediatesubproblem{Find $\var{\X}$.}\spc{4}
+
+\intermediatesubproblem{If $x_1 = 1$, what is the JDF of the remaining rv's?}\spc{4.5}
+
+\intermediatesubproblem{If $x_1 = 1$ and $x_2 = 6$, what is the JDF of the remaining rv's?}\spc{4.5}
+
+
+\easysubproblem{If $x_1 = 1$, $x_2 = 6$ and $x_3 = 3$, how is the remaining rv distributed?}\spc{3}
+
+\end{enumerate}
+
+
+
+
+\problem{These exercises will give you practice with transformations of discrete r.v.'s.}
+
+
+\begin{enumerate}
+
+\easysubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = \natlog{X + 1}$.}\spc{3}
+
+\easysubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = X^3$.}\spc{3}
+
+\intermediatesubproblem{Show that for any r.v. $X$ (discrete or continuous), if $Y = aX + b$, then $F_Y(y) = F_X\parens{\frac{y - b}{a}}$.}\spc{2}
+
+\intermediatesubproblem{Let $X \sim \negbin{k}{p}$. Find the PMF of $Y = X^2$. Is $g(X)$ monotonic? Does that matter for this r.v.?}\spc{2}
+
+\hardsubproblem{Let $X \sim \binomial{n}{p}$ where $n$ is an even number. Find an expression for the PMF of $Y = \text{mod}(X, 2)$.}\spc{5}
+
+\end{enumerate}
+
+
+\problem{These exercises will give you practice with transformations of continuous r.v.'s.}
+
+
+\begin{enumerate}
+
+\inthenotessubproblem{Let $g$ be a strictly decreasing function and $X$ be a continuous rv and $Y = g(X)$. Find a formula for the PDF of $Y$. Justify each step.}\spc{9}
+
+\inthenotessubproblem{Let $g(x) = ax + b$, $X$ be a continuous rv and $Y = g(X)$. Find a formula for the PDF of $Y$. Do this step-by-step (i.e., first find the inverse function).}\spc{4}
+
+
+
+\intermediatesubproblem{Let $X \sim \exponential{\lambda}$. Show that $Y = aX$ is an exponential rv and find its paramter. Use the transformation formula (not ch.f.'s).}\spc{5}
+
+
+\hardsubproblem{Let $X \sim \text{Logistic}(0,1)$. Find the PDF of $Y = g(X) = \oneover{1 + e^{-X}}$. If this is a brand name r.v., mark it so and include its parameter values.}\spc{5}
+
+
+\intermediatesubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = ke^X$ where $k>0$. This will be a brand name r.v., so mark it so and include its parameter values.}\spc{8}
+
+\intermediatesubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \natlog{X}$.}\spc{5}
+
+
+\hardsubproblem{If $X \sim \exponential{\lambda}$ then show that $Y = X^\beta \sim \text{Weibull}$ where $\beta > 0$. Find the resulting Weibull's parameters in terms of the parameterization we learned in class.}\spc{7}
+
+\extracreditsubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \sin{X}$. Don't attempt this unless you have extra time.}\spc{6}
+
+
+\easysubproblem{Rederive the $X \sim \text{Laplace}(0, 1)$ r.v. model by taking the difference of two standard exponential r.v.'s.}\spc{8}
+
+
+\easysubproblem{Show that $\mathcal{E} \sim \text{Laplace}(0, \sigma)$ satisfies the three conditions of the definition of an \qu{error distribution}.}\spc{6}
+
+\end{enumerate}
+
+
+\problem{These exercises will give you practice with the gamma function.}
+
+
+\begin{enumerate}
+
+\inthenotessubproblem{Write the definition of $\Gamma\parens{x}$.}\spc{0.5}
+
+\hardsubproblem{Prove $\Gamma\parens{k + 1} = k \Gamma\parens{k}$ for $k > 0$.}\spc{6}
+
+
+\intermediatesubproblem{Write the definition of $Q\parens{x,a}$ without using the gamma function.}\spc{3}
+
+
+\intermediatesubproblem{If $0 < a < b < \infty$, find an integral expression for $\Gamma\parens{x, b} - \gamma\parens{x, a}$.}\spc{1.5}
+
+
+%\easysubproblem{For $a,c \in (0, \infty)$, prove $\int_a^\infty t^{x-1} e^{-ct} dt = \frac{\Gamma\parens{x, ac}}{c^x}$.}\spc{4}
+
+
+\intermediatesubproblem{Let $X \sim \text{Gamma}(\alpha, \beta)$. Prove the Humpty Dumpty identity. How do you think the Gamma rv got its name?}\spc{4}
+
+
+\inthenotessubproblem{Write the PMF's and parameter spaces of both the extended negative binomial rv and the negative binomial rv model. Explain how the latter \qu{upgrades} the former.}\spc{3}
+
+\inthenotessubproblem{Write the PDF's and parameter spaces of both the gamma rv and the Erlang rv model. Explain how the latter \qu{upgrades} the former.}\spc{3}
+
+\end{enumerate}
+
+
+
+\end{document}
+
+
 \problem{These exercises will introduce implications of the CLT.}
 
 \begin{enumerate}
 
-\inthenotessubproblem{State the CLT with all of its assumptions.}\spc{3}
+\easysubproblem{State the CLT with all of its assumptions.}\spc{3}
 
-\inthenotessubproblem{State the asymptotic distribution of $\Xbar_n$, the average of the rv's.}\spc{1}
-\inthenotessubproblem{State the asymptotic distribution of $T_n$, the total of the rv's.}\spc{1}
+\easysubproblem{State the asymptotic distribution of $\Xbar_n$, the average of the rv's.}\spc{1}
+\easysubproblem{State the asymptotic distribution of $T_n$, the total of the rv's.}\spc{1}
 
 \intermediatesubproblem{According to \href{https://www.macrotrends.net/2526/sp-500-historical-annual-returns}{this site}, the S\&P500 delivers an average of 7.7\% per year with a standard deviation of 19.1\%. What is the probability the average yearly return over 20yr is positive? Note: this is a different question from \qu{do you make money over 20yr given an initial investment}? We will learn how to answer that latter question later in the semester when we learn about the LogNormal rv.}\spc{4}
 
 \end{enumerate}
 
-
-\problem{These exercises will introduce the concept of covariance (the metric that gauges linear dependence between two rv's).}
-
-\begin{enumerate}
-
-\inthenotessubproblem{Prove that $\cov{X_1}{X_2} = \expe{(X_1 - \mu_1)(X_2 - \mu_2)}$.}\spc{1}
-
-\inthenotessubproblem{Prove that $\cov{X_1}{X_2} = \cov{X_2}{X_1}$.}\spc{1}
-
-
-\inthenotessubproblem{Prove that $\cov{X_1 + X_3}{X_2} = \cov{X_1}{X_2} + \cov{X_3}{X_2}$.}\spc{1.5}
-
-
-
-\hardsubproblem{Prove that
-
-\beqn
-\var{\sum_{i = 1}^n X_i} = \sum_{i = 1}^n \sum_{j = 1}^n \cov{X_i}{X_j}.
-\eeqn
-
-Hint: use induction and play with the sum notation.}\spc{13}
-
-
-\intermediatesubproblem{[MA] Prove that
-
-\beqn
-\cov{\sum_{i \in A} X_i}{\sum_{j \in B} Y_j} = \sum_{i \in A} \sum_{j \in B} \cov{X_i}{Y_j}
-\eeqn.}\spc{7}
-
-
-\inthenotessubproblem{Prove the Cauchy-Schwartz Inequality.}\spc{8}
-\inthenotessubproblem{Prove the Covariance Inequality by invoking the Cauchy-Schwartz Inequality.}\spc{3}
-
-
-\intermediatesubproblem{Let $Q$ be a non-negative, non-degenerate discrete rv. Prove $\expe{Q} > 0$.}\spc{4}
-
-
-
-\intermediatesubproblem{Correlation $\rho$ is a normalized unitless covariance metric. It is defined for for any two rv's $X_1$ and $X_2$ as:
-
-\beqn
-\rho_{1,2} := \corr{X_1,\,X_2} := \frac{\sigma_{1,2}}{\sigma_1 \sigma_2} = \frac{\cov{X_1}{X_2}}{\sqrt{\var{X_1} \var{X_2}}}.
-\eeqn
-
-Prove that $\rho \in \bracks{-1, 1}$ for any two rv's $X_1$ and $X_2$.}\spc{4}
-
-\end{enumerate}
-
-
-\problem{These exercises will introduce the famous inequalities.}
-
-\begin{enumerate}
-
-\inthenotessubproblem{Prove Markov's Inequality. State the assumptions clearly.}\spc{4}
-
-\intermediatesubproblem{Prove a Markov's-like Inequality for the bound on the probability of the left tail for a negative r.v. $X$.}\spc{5}
-
-\inthenotessubproblem{Prove Chebyshev's Inequality. State the assumptions clearly.}\spc{4}
-
-\inthenotessubproblem{Prove the lemma of Chebyshev's Inequality for the tail which looks like $\prob{X \geq b} \leq ...$. State the assumptions clearly.}\spc{4}
-
-
-\intermediatesubproblem{Let $X$ be a non-negative rv. Prove $\prob{X \geq a} \leq \frac{\expe{X^3}}{a^3}$ where $a > 0$.}\spc{4}
-
-\intermediatesubproblem{Prove that if $\expe{\abss{X}}$ is finite then $\expe{X}$ is finite.}\spc{3}
-
-
-\hardsubproblem{[MA] Prove that if $\expe{X}$ is finite then $\expe{\abss{X}}$ is finite.}\spc{8}
-
-
-\hardsubproblem{Let $X_n \sim \exponential{n}$. Compute upper bounds for $\prob{X \geq 3}$ via Markov and Chebyshev. Does one go to zero \qu{faster} than the other? Explain.}\spc{9}
-
-
-\end{enumerate}
-
-\problem{These questions are about convergence.}
-
-\begin{enumerate}
-
-\intermediatesubproblem{Given
-
-\beqn
-X_n \sim \begin{cases}
-0 \withprob 1 - \frac{1}{(n+1)^2} \\
-1 \withprob \frac{1}{(n+1)^2} \\
-\end{cases}
-\eeqn
-
-Show that $X_n \convd 0$. To do so, write out the PMF of $X_n$ as a CDF using indicator functions in new format and then take the limit. You can also use the theorem we never proved that $\limitn \indic{a_n} = \indic{\limitn a_n}$. }\spc{5}
-
-\intermediatesubproblem{Prove that $X_n \convp 0$. For a full proof of $\forall \epsilon$, you need to show it for $\epsilon < 1$ and $\epsilon \geq 1$ separately but since we only care about small epsilon, you can just demonstrate it for $\epsilon < 1$.}\spc{7}
-
-\intermediatesubproblem{If $X_n \sim \exponential{n}$, prove that $X_n \convd 0$.}\spc{7}
-
-\intermediatesubproblem{If $X_n \sim \exponential{n}$, prove that $X_n \convp 0$. You can prove this using its CDF, using P7 of chf's or using Markov's inequality.}\spc{7}
-
-\hardsubproblem{[MA] Prove that PDF convergence implies CDF convergence (i.e., that $X_n \convd X$). You will need to use the dominated convergence theorem (DCT). Justifying the use of the DCT is slightly harder.}\spc{7}
-
-\intermediatesubproblem{Let $X_n \sim f_{X_n}(x) = (1 - \cos{2\pi n x}) \indic{x \in \zeroonecl}$. Show that $X_n \convd \stduniform$. Hint: use the fact that $\lim_{n \rightarrow \infty}\frac{\sin{nx}}{n} = 0$ which should have been proven using the \qu{squeeze theorem} in your calculus class. The CDF is pictured below for $n = 1, 2, 3, 4, \ldots$.}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=4.5in]{conv.jpg}
-\end{figure}~\spc{3}
-
-\intermediatesubproblem{[MA] Show that $\lim_{n \rightarrow \infty} f_{X_n}$ does not exist. This is a counterexample to the conjecture that CDF convergence implies PDF convergence for finite continuous distributions with a limiting continuous distribution. Hint: it is just a calculus exercise.}\spc{2}
-
-\end{enumerate}
-
-\problem{These exercises will give you practice with the continuous mapping theorem (CMT) and Slutsky's theorems.}
+\problem{These exercises will introduce the Multinomial distribution.}
 
 
 \begin{enumerate}
 
-\easysubproblem{State the CMT.}\spc{1}
+\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is the parameter space for both $n$ and $\p$?}\spc{2}
 
-\easysubproblem{State Slutsky's theorem A.}\spc{1}
-
-\easysubproblem{State Slutsky's theorem B.}\spc{1}
-
-\easysubproblem{If $X_n \convd X$ and $\lim_{n \rightarrow \infty} a_n = a$, prove $a_n X_n \convd aX$.}\spc{4}
-
-
-\easysubproblem{Write the rv $S^2_n$ as a function of $\Xoneton$.}\spc{4}
-
-
-\easysubproblem{Prove $S^2_n \convp \sigsq$.}\spc{10}
-
-
-\easysubproblem{Prove $S_n \convp \sigma$.}\spc{1}
-
-\easysubproblem{Prove $\sqrt{n}(\Xbar_n - \mu) / S \convd \stdnormnot$.}\spc{10}
-
-\end{enumerate}
-
-
-
-\problem{These exercises will introduce the Multinomial distribution. }
-
-
-\begin{enumerate}
-
-
-\inthenotessubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is the parameter space for both $n$ and $\p$?}\spc{2}
-
-\inthenotessubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is $\support{\X}$?}\spc{2}
+\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is $\support{\X}$?}\spc{2}
 
 \easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is $\dime{\p}$?}\spc{-0.5}
 
-\inthenotessubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, express $p_2$ as a function of $p_1$.}\spc{0}
+\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, express $p_2$ as a function of $p_1$.}\spc{0}
 
-\inthenotessubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, prove that $X_2 \sim \binomial{n}{p_2}$.}\spc{10}
+\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, prove that $X_2 \sim \binomial{n}{p_2}$.}\spc{10}
 
 \easysubproblem{If $\X \sim \multinomial{n}{\p}$ and $n = 1$ and $\dime{\X} = 7$ as a column vector, give an example value of $\x$, a realization of the r.v. $\X$. Use the notation $\bracks{\ldots}\top$ to write it as a row vector transposed.}\spc{0.5}
 
@@ -222,7 +194,7 @@ Show that $X_n \convd 0$. To do so, write out the PMF of $X_n$ as a CDF using in
 
 \intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, prove that the sum over the JMF is 1. To do this, use the \href{https://en.wikipedia.org/wiki/Multinomial_theorem}{multinomial theorem}.}\spc{4}
 
-\hardsubproblem{[MA] Let $\X_1, \X_2 \iid \multinomial{n}{\p}$ with $\dime{\X_1} = \dime{\X_2} = k$. Find the JMF of $\T_2 = \X_1 + \X_2$ from the definition of convolution. This looks harder than it is! First, use the definition of convolution and factor out the terms that are not a function of $x_1, \ldots, x_K$. Finally, use Theorem 1 in this paper: \href{https://www.researchgate.net/publication/290448343_A_combinatorial_contribution_to_the_multinomial_Chu-Vandermonde_convolution}{[click here]} for the summation.}\spc{11}
+\hardsubproblem{[MA] Let $\X_1, \X_2 \iid \multinomial{n}{\p}$ with $\dime{\X_1} = \dime{\X_2} = k$. Find the JMF of $\T_2 = \X_1 + \X_2$ from the definition of convolution. This looks harder than it is! First, use the definition of convolution and factor out the terms that are not a function of $x_1, \ldots, x_K$. Finally, use Theorem 1 in this paper: \href{http://www.lrecits.usthb.dz/1.3.pdf}{[click here]} for the summation.}\spc{11}
 
 \intermediatesubproblem{Explain in English why the following should be true. Remember how the sampling from the bag works.
 
@@ -245,23 +217,59 @@ Draw one marble with replacement 37 times. What is the probability of getting 10
 \extracreditsubproblem{[MA] If $\X \sim \multinomial{n}{\p}$, find the JMF of any subset of $X_1, \ldots, X_k$. Is it technically multinomial? This is not much harder than the previous problem if formulated carefully.}\spc{8}
 
 
-
 \end{enumerate}
 
 
+\problem{These exercises will introduce the concept of covariance (the metric that gauges linear dependence between two rv's).}
+
+\begin{enumerate}
+
+\easysubproblem{Prove that $\cov{X_1}{X_2} = \expe{(X_1 - \mu_1)(X_2 - \mu_2)}$.}\spc{1}
+
+\easysubproblem{Prove that $\cov{X_1}{X_2} = \cov{X_2}{X_1}$.}\spc{1}
+
+
+\easysubproblem{Prove that $\cov{X_1 + X_3}{X_2} = \cov{X_1}{X_2} + \cov{X_3}{X_2}$.}\spc{2}
+
+
+
+\hardsubproblem{Prove that
+
+\beqn
+\var{\sum_{i = 1}^n X_i} = \sum_{i = 1}^n \sum_{j = 1}^n \cov{X_i}{X_j}.
+\eeqn
+
+Hint: use induction and play with the sum notation.}\spc{9}
+
+
+\intermediatesubproblem{[MA] Prove that
+
+\beqn
+\cov{\sum_{i \in A} X_i}{\sum_{j \in B} Y_j} = \sum_{i \in A} \sum_{j \in B} \cov{X_i}{Y_j}
+\eeqn.}\spc{7}
+
+
+\easysubproblem{Prove the Cauchy-Schwartz Inequality.}\spc{8}
+\easysubproblem{Prove the Covariance Inequality by invoking the Cauchy-Schwartz Inequality.}\spc{3}
+
+
+\intermediatesubproblem{Let $Q$ be a non-negative, non-degenerate discrete rv. Prove $\expe{Q} > 0$.}\spc{4}
+
+\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} \geq 2$, compute an upper bound for the covariance of $X_1$ and $X_2$. Hint, to get the best possible upper bound, use the fact that we know this covariance must be negative.}\spc{5}
+
+
+\intermediatesubproblem{Correlation $\rho$ is a normalized unitless covariance metric. It is defined for for any two rv's $X_1$ and $X_2$ as:
+
+\beqn
+\rho_{1,2} := \corr{X_1,\,X_2} := \frac{\sigma_{1,2}}{\sigma_1 \sigma_2} = \frac{\cov{X_1}{X_2}}{\sqrt{\var{X_1} \var{X_2}}}.
+\eeqn
+
+Prove that $\rho \in \bracks{-1, 1}$ for any two rv's $X_1$ and $X_2$.}\spc{4}
+
+\end{enumerate}
+
 \end{document}
 
-\easysubproblem{Consider the following rv for the remaining exercises in this problem:\\ $\X \sim \multinomial{17}{\bracks{0.1~0.2~0.3~0.4}^\top}$. What is $\dime{\X}$?}\spc{0}
-
-
-\intermediatesubproblem{Find $\var{\X}$.}\spc{4}
-
-\intermediatesubproblem{If $x_1 = 1$, what is the JDF of the remaining rv's?}\spc{4.5}
-
-\intermediatesubproblem{If $x_1 = 1$ and $x_2 = 6$, what is the JDF of the remaining rv's?}\spc{4.5}
-
-
-\easysubproblem{If $x_1 = 1$, $x_2 = 6$ and $x_3 = 3$, how is the remaining rv distributed?}\spc{3}
 
 
 
@@ -416,3 +424,7 @@ Draw one marble with replacement 37 times. What is the probability of getting 10
 %
 %
 %\end{enumerate}
+
+
+
+%\intermediatesubproblem{Find an upper bound for the last quartile (i.e. the 75\%ile) of a positive r.v. $X$ as a function of its mean.}\spc{5}
