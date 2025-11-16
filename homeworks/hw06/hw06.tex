@@ -12,7 +12,7 @@
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due by email 11:59PM November 25, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due by email on the date found on the homepage \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -119,6 +119,20 @@ NAME: \line(1,0){380}
 
 \end{enumerate}\pagebreak
 
+\problem{We will practice conditional and marginal densities. Let $X \sim \stduniform$ and $Y\,|\,X = x \sim \uniform{0}{x^2}$.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Draw an illustration of the JDF $f_{X,Y}(x,y)$.}\spc{4}
+
+\hardsubproblem{Find $f_Y(y)$.}\spc{4}
+
+\hardsubproblem{Draw an illustration of $f_Y(y)$.}\spc{4}
+
+\hardsubproblem{Find $f_{X|Y}(x, y)$.}\spc{4}
+
+\hardsubproblem{Draw an illustration of  $f_{X|Y}(x, 0.6)$.}\spc{4}
+\end{enumerate}
 
 \problem{We will practice using computing quantiles, finding the quantile function and sampling.}
 
@@ -141,13 +155,13 @@ NAME: \line(1,0){380}
 \begin{enumerate}
 
 
-\easysubproblem{Prove the PMF of $X \sim \poisson{\lambda}$ using the limit as $n \rightarrow \infty$ and let $p = \overn{\lambda}$.}\spc{9}
+\inthenotessubproblem{Prove the PMF of $X \sim \poisson{\lambda}$ using the limit as $n \rightarrow \infty$ and let $p = \overn{\lambda}$.}\spc{10}
 
 
-\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$. It will be a brand name random variable.}\spc{7}
+\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$. It will be a brand name random variable.}\spc{8}
 
 
-\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{5}
+\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric distributed (see \href{https://en.wikipedia.org/wiki/Hypergeometric_distribution}{here}).  Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{8}
 
 %\hardsubproblem{Let $X_1 \sim \poisson{\lambda_1}$ independent of $X_2 \sim \poisson{\lambda_2}$. Find the PMF of the sum of $T = X_1 + X_2$ using a convolution.}\spc{12}
 
@@ -165,7 +179,7 @@ NAME: \line(1,0){380}
 \intermediatesubproblem{Find the $\cprob{X = 1}{Y = 2}$.}\spc{4}
 
 
-\easysubproblem{If $X \sim \betanot{\alpha}{\beta}$ and $Y\,|\,X = x \sim \binomial{n}{x}$, find the PMF of $Y$.}\spc{6}
+\inthenotessubproblem{If $X \sim \betanot{\alpha}{\beta}$ and $Y\,|\,X = x \sim \binomial{n}{x}$ where $n$ is considered known in advance. Find $p_Y(y)$.}\spc{8}
 
 
 \hardsubproblem{If $X \sim \gammanot{\alpha}{\beta}$ and $Y\,|\,X = x \sim \exponential{x}$, show that $Y \sim \text{Lomax}(\alpha, \beta)$. See the Lomax's Wikipedia article  by clicking \href{https://en.wikipedia.org/wiki/Lomax_distribution}{here}. Kernels always make it easier.}\spc{10}
@@ -226,10 +240,10 @@ Thus we have the strange equality:
 Letting $y := k-1$,
 
 \beqn
-\sum_{j=0}^{y} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - y, y + 1)
+\sum_{j=0}^{y} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - y, y + 1),
 \eeqn
 
-Note that the lhs is the CDF for $Y \sim \binomial{n}{x}.~\blacksquare$
+proves our result as the lhs is the CDF for $Y \sim \binomial{n}{x}.~\blacksquare$
 
 \end{document}
 
