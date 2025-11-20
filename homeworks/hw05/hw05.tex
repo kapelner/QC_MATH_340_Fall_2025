@@ -111,9 +111,9 @@ g(Z_1,  Z_2, \ldots) = Z_1^2 + Z_2^2 + \ldots + Z_k^2 \sim \chisq{k}
 
 
 
-\inthenotessubproblem{If $W^2 \sim F_{1, k}$ $k \in \naturals$, $W$ is symmetric about zero, then $W \sim$}\spc{-0.5}
+\hardsubproblem{If $W^2 \sim F_{1, k}$ $k \in \naturals$, $W$ is symmetric about zero, then how is $W$ distributed? Hint: $F_{W^2}(w) := P(W^2 \leq w) = P(W \in [-\sqrt{w}, \sqrt{w}]) = F_W(\sqrt{w}) - F_W(-\sqrt{w})$ then take the derivative wrt $w$ on both sides.}\spc{6}
 
-\hardsubproblem{Let $W^2 \sim F_{1, k}$ where $k \in \naturals$. Let $W = g(W) = \sqrt{W^2}$. Find th PDF of $W$. Remember that $g$ is not a 1:1 function.} \spc{9}
+\hardsubproblem{Assume $W$ to be the answer from the previous question. Let $X = g(W) = |W|$. Find the PDF of $X$. Remember that $g$ is not a 1:1 function. Hint: $F_X(x) := P(X \leq x) = P(|W| \leq x) = P(W \in [-x,x]) \indic{x>0} = (F_W(x) - F_W(-x))  \indic{x>0}$. Then take the derivative wrt $x$ on both sides.} \spc{9}
 
 \hardsubproblem{Let $X_n$ be a sequence of continuous rv's. Prove that if $\lim_{n \rightarrow \infty} f_{X_n}(x) = f_X(x)$ then $X_n \convd X$ i.e., PDF convergence implies CDF convergence. Hint: in our case here, assume you can interchange limits and integrals as $f_{X_n}(x)$ doesn't do weird stuff like shoot off to infinity.} \spc{9}
 

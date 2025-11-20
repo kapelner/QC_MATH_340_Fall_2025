@@ -28,15 +28,16 @@ order_stats = data.frame(
   xorder15s = Xs[15, ]
 )
 NBINS = 500
+ALPHA = 0.5
 ggplot(order_stats) + 
   xlab("x") +
   geom_histogram(aes(x = xmins, y = after_stat(density)),     
-                 bins = NBINS, fill = "red") + 
+                 bins = NBINS, fill = "red", alpha = ALPHA) + 
   geom_histogram(aes(x = xmaxs, y = after_stat(density)),     
-                 bins = NBINS, fill = "blue") + 
+                 bins = NBINS, fill = "blue", alpha = ALPHA) + 
   geom_histogram(aes(x = xmedians, y = after_stat(density)),  
-                 bins = NBINS, fill = "green") + 
+                 bins = NBINS, fill = "green", alpha = ALPHA) + 
   geom_histogram(aes(x = xorder3s, y = after_stat(density)),  
-                 bins = NBINS, fill = "purple") + 
+                 bins = NBINS, fill = "purple", alpha = ALPHA) + 
   geom_histogram(aes(x = xorder15s, y = after_stat(density)), 
-                 bins = NBINS, fill = "yellow")
+                 bins = NBINS, fill = "yellow", alpha = ALPHA)
