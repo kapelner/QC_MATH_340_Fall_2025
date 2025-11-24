@@ -11,7 +11,8 @@ My lecture notes are scanned in as PDF files contributed by myself and are found
 
 Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Gangaram at gangaram340640@gmail.com. For the subject, write "Math [340, 640] HW #[number], [your full name]" where you fill in the brackets appropriately.
 
-<!-- * Homework 7 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf) (due 12/14)-->
+<!-- -->
+* Homework 7 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw07/hw07.pdf) (due 12/14)
 * Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw06/hw06.pdf) (due 11/30)
 * Homework 5 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw05/hw05.pdf) (due 11/19)
 * Homework 4 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/homeworks/hw04/hw04.pdf) (due 11/2)
@@ -24,7 +25,7 @@ Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Ga
 
 * Midterm I, Tues, Sept 30 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1_solutions.pdf)
 * Midterm II, Thurs, Nov 13 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm2/midterm2_solutions.pdf)
-* Final, TBA
+* Final, Thurs, Dec 18 4-6PM KY 258
 
 ## Practice Exams
 
