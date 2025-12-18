@@ -25,7 +25,7 @@ Homeworks are to be emailed by the time indicated on the PDF to the TA Elliot Ga
 
 * Midterm I, Tues, Sept 30 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm1/midterm1_solutions.pdf)
 * Midterm II, Thurs, Nov 13 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/midterm2/midterm2_solutions.pdf)
-* Final, Thurs, Dec 18 4-6PM KY 258
+* Final, Thurs, Dec 18 4-6PM KY 258 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/final/final.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2025/blob/main/exams/final/final_solutions.pdf)
 
 ## Practice Exams
 

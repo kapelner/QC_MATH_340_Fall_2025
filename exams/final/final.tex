@@ -1,0 +1,338 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{solutions}
+%\toggletrue{solutions}
+
+\title{Math 340 / 640 Fall \the\year{} \\ Final Examination \iftoggle{solutions}{\inred{Solutions}}}
+\author{Professor Adam Kapelner}
+\date{December 18, \the\year{}}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.\\
+\\
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\~\\
+
+\begin{center}
+\line(1,0){350} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 120 minutes (variable time per question) and closed-book. You are allowed \textbf{three} pages (front and back) of a \qu{cheat sheet}, blank scrap paper (provided by the proctor) and a graphing calculator (which is not your smartphone). Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem These questions are theoretical.
+
+\begin{enumerate}[(a)]
+
+
+\subquestionwithpoints{8} Let $X \sim \uniform{0}{1}$ and $Y~|~X = x \sim \poisson{x}$. Find the marginal distribution of $Y$ expressed as a regularized incomplete gamma function ($P$ or $Q$) times the support term $\indic{y \in \support{Y}}$.
+
+\iftoggle{solutions}{\inred{
+\beqn
+p_Y(y) &=& \int_\reals p_{Y|X}(y,x) f_X(x) dx \\
+&=& \int_\reals \parens{\frac{x^y e^{-x}}{y!} \indic{y \in \naturals_0}} \parens{\indic{x \in (0,1)}} dx \\
+&=& \oneover{y!} \indic{y \in \naturals_0} \int_0^1 x^{(y+1)-1} e^{-x} dx \\
+&=& \frac{1}{\Gamma(y+1)} \gamma(y+1, 1) \indic{y \in \naturals_0} = P(y+1, 1) \indic{y \in \naturals_0} \\
+\eeqn
+}}{~\spc{12}}
+
+\subquestionwithpoints{5} Let $X \sim \uniform{0}{1}$ and $Y~|~X = x \sim \poisson{x}$. Find $\expe{Y}$ using the law of iterated expectation.
+
+\iftoggle{solutions}{\inred{
+\beqn
+\expe{Y} &=& \expesub{X}{\cexpesub{Y}{Y}{X}} \\
+&=& \expesub{X}{X} \eqncomment{We proved that the expectation of a $\poisson{\lambda}$ is $\lambda$}\\
+&=& 0.5 \eqncomment{The expectation of a standard uniform}\\
+\eeqn
+}}{~\spc{8}}
+\pagebreak
+
+
+\subquestionwithpoints{8} Let $X \sim \exponential{1}$ and $Y~|~X = x \sim \normnot{0}{x}$. Find the marginal distribution of $Y$. Show that $Y$ is distributed as a brand name rv we've studied and find that name brand rv's parameter values. To do this problem, you'll need to make use of the following integral identity:
+
+\beqn
+\int_0^\infty u^{-\half} e^{-\frac{\alpha}{u} - u} du = \sqrt{\pi} e^{-2\sqrt{\alpha}}
+\eeqn
+
+
+\iftoggle{solutions}{\inred{
+\beqn
+f_Y(y) &=& \int_\reals f_{Y|X}(y,x) f_X(x) dx \\
+&=& \int_\reals \oneover{\sqrt{2\pi x}} e^{-\oneover{2x}y^2} e^{-x} \indic{x \in (0,\infty)} dx \\
+&=& \oneoversqrt{2\pi} \int_0^\infty x^{-\half} e^{-\frac{y^2/2}{x} - x} dx \eqncomment{This is in the format of the integral identity above}\\
+&=& \oneoversqrt{2\pi} \sqrt{\pi} e^{-2\sqrt{y^2 / 2}} \\
+&=& \oneoversqrt{2} e^{-2\frac{|y|}{\sqrt{2}}} = \oneoversqrt{2} e^{-\sqrt{2}|y|}  = \oneover{2\oneoversqrt{2}} e^{-\frac{|y|}{\oneoversqrt{2}}} = \text{Laplace}\parens{0, \oneoversqrt{2}}
+\eeqn
+}}{~\spc{11}}
+
+\subquestionwithpoints{5} Let $X \sim \exponential{1}$ and $Y~|~X = x \sim \normnot{0}{x}$. Find $\var{Y}$ using the law of total variance.
+
+\iftoggle{solutions}{\inred{
+\beqn
+\var{Y} &=& \expesub{X}{\cvarsub{Y}{Y}{X = x}} + \varsub{X}{\cexpesub{Y}{Y}{X = x}}\\
+&=& \expesub{X}{X} + \varsub{X}{0}\\
+&=& 1 + 0 = 1\\
+\eeqn
+}}{~\spc{8}}
+
+\pagebreak
+
+
+\subquestionwithpoints{8} Let $X$ and $Y$ be independent rv's with chf's $\phi_X$ and $\phi_Y$ respectively. Find the joint chf for the vector rv $\bv{U} := \twovec{X-Y}{X+Y}$ as a function of $\phi_X$ and $\phi_Y$. Simplify as much as you can.
+
+\iftoggle{solutions}{\inred{
+\beqn
+\phi_{\bv{U}}(t_1, t_2) &:=& \expe{e^{i (t_1 (X-Y) + t_2 (X+Y))}} \\ % \expe{e^{i (t_1 X + t_2 (X+Y))}} = \expe{e^{i ((t_1 + t_2)X + t_2 Y)}}  = \expe{e^{i (t_1 + t_2)X}} \expe{e^{i t_2 Y}} = \phi_X(t_1 + t_2) \phi_Y(t_2) \\
+&=& \expe{e^{i ((t_1 + t_2)X + (t_2 - t_1)Y)}} \\
+&=& \expe{e^{i (t_1 + t_2)X}} \expe{e^{i (t_2 - t_1)Y}} \\
+&=& \phi_X(t_2 + t_1) \phi_Y(t_2 - t_1)
+\eeqn
+}}{~\spc{10}}
+
+
+\subquestionwithpoints{5} Let $X_1, \ldots, X_{37} \iid \text{Weibull}(k, \lambda)$. Find the PDF of $X_{(17)}$. No need to simplify.
+
+\iftoggle{solutions}{\inred{
+We just plug into the formula from class using the PDF and CDF of the Weibull rv.
+
+\beqn
+f_{X_{(17)}}(x) &=& \frac{37!}{16!20!} \parens{k\lambda (\lambda x)^{k} e^{-(\lambda x)^k}} \tothepow{1 - e^{-(\lambda x)^k}}{16} \tothepow{e^{-(\lambda x)^k}}{20}
+\eeqn
+}}{~\spc{8}}
+
+\pagebreak
+
+
+\subquestionwithpoints{8} Let $X_1$ and $X_2$ be independent continuous rv's. Find the most simple formula which computes the PDF of $M = \natlog{X_1}X_2$ as a function of the densities of $X_1$ and $X_2$.
+
+\iftoggle{solutions}{\inred{
+
+Option 1:
+
+\beqn
+g_2(X_1, X_2) &=& X_1 = U \mathimplies X_1 = h_1(M, U) = U\\
+g_1(X_1, X_2) &=& \natlog{X_1}X_2 = M \mathimplies \natlog{U}X_2 = M \mathimplies X_2 = h_2(M, U) = M / \natlog{U} \\
+J_h &=& \twobytwomat{\partial h_1 / \partial m }{\partial h_1 / \partial u }{\partial h_2 / \partial m }{\partial h_2 / \partial u } = \twobytwomat{0}{1}{1/\natlog{u}}{\text{no need to calculate}} \\
+\abss{\det{J_h}} &=& \abss{-1/\natlog{u}} = 1/\natlog{u} = \natlog{u}^{-1}\\
+f_M(m) &=& \int_\reals f_{X_1}(u) f_{X_2}(m / \natlog{u}) \natlog{u}^{-1} du
+\eeqn
+
+Option 2:
+
+\beqn
+g_2(X_1, X_2) &=& X_2 = U \mathimplies X_2 = h_2(M, U) = U\\
+g_1(X_1, X_2) &=& \natlog{X_1}X_2 = M \mathimplies \natlog{X_1} = M / X_2 = M / U \mathimplies X_1 = h_1(M, U) = e^{M / U} \\
+J_h &=& \twobytwomat{\partial h_1 / \partial m }{\partial h_1 / \partial u }{\partial h_2 / \partial m }{\partial h_2 / \partial u } = \twobytwomat{u^{-1}e^{m/u}}{\text{no need to calculate}}{0}{1} \\
+\abss{\det{J_h}} &=& \abss{u^{-1}e^{m/u}} = |u|^{-1}e^{m/u} \\
+f_M(m) &=& \int_\reals f_{X_1}(e^{m/u}) f_{X_2}(u) e^{m/u} |u|^{-1} du
+\eeqn
+}}{~\spc{8}}
+\pagebreak
+
+\subquestionwithpoints{8} Let $\Xoneton \iid \exponential{\lambda}$. Show that the minimum is distributed as a brand name rv we've studied and find that brand name rv's parameter values.
+
+\iftoggle{solutions}{\inred{
+\beqn
+f_{X_{(n)}}(x) &=& n f(x) (1-F(x))^{n-1} \\
+&=& n \lambda e^{-\lambda x} \tothepow{e^{-\lambda x}}{n-1}  \indic{x > 0} \\
+&=& n \lambda \tothepow{e^{-\lambda x}}{n} \indic{x > 0} \\
+&=& n \lambda e^{-n\lambda x} \indic{x > 0} \\
+&=& \exponential{n\lambda}
+\eeqn
+}}{~\spc{8}}
+
+
+% \subquestionwithpoints{5} Let $\Xoneton \iid \gammanot{\alpha}{\beta}$ stacked into the vector $\X$. Let $A \in \reals^{n \times n}$ and full rank with inverse $A^{-1}$ and let $\c \in \reals^n$. Let $\Y := A\X + \c$, the linear transformation. Find $\phi_{\Y}(\t)$ and simplify.
+
+
+% \iftoggle{solutions}{\inred{
+% \beqn
+% \phi_{\X}(\t) &=& \prod_{i=1}^n \phi_{X_i}(t_i) = \prod_{j=1}^n \tothepow{1 - \frac{it_j}{\beta}}{-\alpha} =  \tothepow{\prod_{j=1}^n \parens{1 - \frac{it_j}{\beta}}}{-\alpha}\\
+% \phi_{\Y}(\t) &=& 
+% \eeqn
+% }}{~\spc{8}}
+
+
+
+
+\subquestionwithpoints{5} Compute $\displaystyle \int_\reals e^{(2\sqrt{\pi})x - \pi x^2}dx$ and simplify as much as possible.
+
+\iftoggle{solutions}{\inred{
+\beqn
+\int_\reals e^{ax - b x^2}dx &=& \sqrt{\frac{\pi}{b}}e^{a^2/(4b)} \\
+\int_\reals e^{2\sqrt{\pi}x - \pi x^2}dx &=& \sqrt{\frac{\pi}{(\pi)}}e^{(2\sqrt{\pi})^2/(4(\pi))} = e\\
+\eeqn
+}}{~\spc{6}}
+
+\subquestionwithpoints{6} Let $\Z \sim \multnormnot{n}{\zerovec_n}{\I_n}$. What is $\prob{\Z > \zerovec_n}$? No need to show work.
+
+\iftoggle{solutions}{\inred{
+Since $\Z$ is symmetric around every axis $j = 1, \ldots, n$, there is always half of its density for positive $z_j$. So if $n=1$, the univariate $\normnot{0}{1}$ has $\half$ its density above zero. For $n=2$, it would have $\half$ its density above $z_1 = 0$ and $\half$ its density above $z_2 = 0$, etc. Since each component is independent, we multiply all the $\half$ terms. Thus the answer is $\oneover{2^n}$.
+}}{~\spc{8}}
+
+
+\pagebreak
+
+
+
+
+\subquestionwithpoints{6} Let $X \sim \text{ParetoI}(17, \lambda)$. Let $Y = X~|~X > 37$. Show that $Y$ is distributed as a brand name rv we've studied and find that name brand rv's parameter values. 
+
+\iftoggle{solutions}{\inred{
+\beqn
+f_Y(y) = \frac{f_X(y) \indic{y > 37}}{\prob{X > 37}} = \frac{\parens{\displaystyle\frac{\lambda 17^\lambda}{y^{\lambda + 1}} \indic{y > 17}}\indic{y > 37}}{\tothepow{\displaystyle\frac{17}{37}}{\lambda}} = \frac{\lambda 37^\lambda}{y^{\lambda+1}}\indic{y > 37} = \text{ParetoI}(37, \lambda)
+\eeqn
+}}{~\spc{8}}
+
+
+
+\subquestionwithpoints{6}  Let $u=.1234$ be a sample from $U \sim \stduniform$. Using the algorithm we discussed in class, draw a realization $x$ from $X \sim \text{Logistic}(0,1)$ using this value of $u$. Round to two decimals.
+
+\iftoggle{solutions}{\inred{
+This is a case where the rv $X$ is continuous, its CDF exists and its CDF can be inverted. So we first calculate $F^{-1}(q)$:
+
+\beqn
+&& q = F_X(x) = \oneover{1 + e^{-x}} \mathimplies \oneover{q} = 1 + e^{-x}  \mathimplies \oneover{q} - 1 = e^{-x} \\
+&&   \mathimplies \frac{q}{1-q} = e^{x} \mathimplies x = \natlog{\frac{q}{1-q}} = F^{-1}(q)
+\eeqn
+
+Now we view $u$ as the quantile value of the corresponding $x$ and compute
+
+\beqn
+x = F^{-1}(.1234) = \natlog{\frac{.1234}{1-.1234}} = -1.96
+\eeqn
+}}{~\spc{8}}
+\pagebreak
+
+\subquestionwithpoints{8} Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$. Find $k_{\X}(\x)$, the kernel of its JDF.
+
+\iftoggle{solutions}{\inred{
+\beqn
+f_{\X}(\x) &=& \oneoversqrt{(2\pi)^n \det{\bSigma}} e^{-\half (\x -\muvec)^\top \bSigma^{-1} (\x - \muvec)} \eqncomment{The first term is a constant wrt $x$}\\
+&\propto& e^{-\half (\x -\muvec)^\top \bSigma^{-1} (\x - \muvec)} \\
+&=& e^{-\half (\x -\muvec)^\top \parens{\bSigma^{-1}\x - {\bSigma^{-1}\muvec)}}} \\
+&=& e^{-\half \parens{\x^\top\bSigma^{-1}\x -\x^\top\bSigma^{-1}\muvec - \muvec^\top \bSigma^{-1} \x + \muvec^\top \bSigma^{-1} \muvec}} \\
+&=& e^{-\half \x^\top\bSigma^{-1}\x} 
+e^{\half \x^\top\bSigma^{-1}\muvec}
+e^{\half \muvec^\top \bSigma^{-1} \x}
+e^{-\half\muvec^\top \bSigma^{-1} \muvec} \eqncomment{The last term is a constant wrt $x$}\\
+&\propto& e^{-\half \parens{\x^\top\bSigma^{-1}\x -\x^\top\bSigma^{-1}\muvec - \muvec^\top \bSigma^{-1} \x}} = k_{\X}(\x)
+\eeqn
+}}{~\spc{12}}
+
+\subquestionwithpoints{6} Let $\X_1 \sim \multnormnot{n}{\muvec_1}{\bSigma_1}$ independent of $\X_2 \sim \multnormnot{n}{\muvec_2}{\bSigma_2}$. Find the JDF of $\X_1 + \X_2$ by using joint chf's. Make sure you state the properties you are using at the steps that use the properties. 
+
+\iftoggle{solutions}{\inred{
+\beqn
+\phi_{\X_1 + \X_2}(\t) &=& \phi_{\X_1}(\t) \phi_{\X_2}(\t) \eqncomment{By chf P2}\\
+&=& e^{i\t^\top \muvec_1 - \half \t^\top \bSigma_1 \t} e^{i\t^\top \muvec_2 - \half \t^\top \bSigma_2 \t} \\
+&=& e^{i\t^\top \muvec_1 + i\t^\top\muvec_2 - \half \t^\top \bSigma_1 \t - \half \t^\top \bSigma_2 \t} \\
+&=& e^{i\t^\top (\muvec_1 + \muvec_2) - \half \t^\top (\bSigma_1 +   \bSigma_2) \t} \\
+\mathimplies \X_1 + \X_2 &\sim& \multnormnot{n}{\muvec_1 + \muvec_2}{\bSigma_1 + \bSigma_2} \eqncomment{By chf P1}
+\eeqn
+}}{~\spc{8}}
+
+
+\pagebreak
+
+
+% \subquestionwithpoints{6} Let $\X \sim \multnormnot{n}{\muvec}{\Sigma}$ where 
+
+% \beqn
+% \muvec = \threevec{0.17}{0.19}{0.76},~~ \bSigma = \bracks{\begin{array}{ccc}
+% 1.16 & 1.03 & -0.01 \\
+% 1.03 & 4.30 & 1.92 \\
+% -0.01 & 1.92 & 1.12
+% \end{array}}
+% \eeqn
+
+% where $\bSigma$ is full rank and symmetric. Find the distribution of $X_1 - X_2$. Compute its parameters to two decimals.
+
+
+% \iftoggle{solutions}{\inred{
+% You can solve this using the joint characteristic function or use the result we proved in class that $B\X + \c$ is multivariate normal. Here we have $B = [1~-1~0]$ and $\c = \zerovec_3$. Then instead of doing any matrix algebra is suffices to just find the expectation and variance:
+
+% \beqn
+% \expe{X_1 - X_2} &=& \mu_1 - \mu_2 = 0.17 - 0.19 = -0.02 \\
+% \var{X_1 - X_2} &=& \var{X_1} + \var{-X_2} + 2\cov{X_1}{-X_2} \\
+% &=& \var{X_1} + \var{X_2} - 2\cov{X_1}{X_2} \\
+% &=& \bSigma_{1,1} + \bSigma_{2,2} - 2 \bSigma_{1,2} = 1.16 + 4.30 - 2 \cdot 1.03 = 3.40 \\
+% \mathimplies X_1 - X_2 &\sim& \normnot{-0.02}{3.40}
+% \eeqn
+% }}{~\spc{8}}
+
+
+\subquestionwithpoints{8} Prove the following integral identity:
+
+\beqn
+B(a,b) = \int_0^\infty \frac{t^{a-1}}{(1+t)^{a+b}}dt
+\eeqn
+
+
+\iftoggle{solutions}{\inred{
+
+We rewrite the expression as follows:
+
+\beqn
+B(a,b) = \int_0^\infty \tothepow{\frac{t}{1+t}}{a} \oneover{t} \tothepow{\oneover{1+t}}{b} dt
+\eeqn
+
+We know that
+
+\beqn
+B(a,b) := \int_0^1 u^{a-1} (1-u)^{b-1} du
+\eeqn
+
+So we need to make this upper integral look like it. The upper bound is $\infty$ which gives us a hint we need to do a $u$ substitution to change it to a 1. Let $u = \frac{t}{1+t} \mathimplies 1 - u = \frac{1}{1+t} \mathimplies u = t(1-u) \mathimplies t = \frac{u}{1-u} \mathimplies \oneover{t} = \frac{1-u}{u}$. And so $\frac{du}{dt} = ((1+t) - t)/(1+t)^2 = (1+t)^{-2}$ and rearranging gives $dt = (1+t)^2 du = \oneover{(1-u)^{2}} du$  The bounds change. If $t=0 \mathimplies u = 0$ and $t = \infty \mathimplies u = 1$. So substituting in:
+
+\beqn
+B(a,b) = \int_0^1 \tothepow{u}{a} \frac{1-u}{u} \tothepow{1-u}{b} \oneover{(1-u)^{2}} du = \int_0^1 u^{a-1} (1-u)^{b-1} du ~~\checkmark
+\eeqn
+
+}}{~\spc{8}}
+\pagebreak
+
+\subquestionwithpoints{10} Extra Credit. Do not attempt this problem until you are finished with the rest of the test. Let $X \sim \text{Logistic}(0,1)$. Show that $\phi_X(t) = \Gamma(1-c(t))\Gamma(1+c(t))$ and find $c(t) \in \mathbb{C}$.  
+
+
+\iftoggle{solutions}{\inred{
+\beqn
+\phi_{X}(t) &:=& \expe{e^{i tX}} := \int_\reals e^{itx} \frac{e^{-x}}{(1+e^{-x})^2}dx
+%&=& \int_\reals e^{(it - 1)x}\oneover{(1+u)^{2}} dx \\
+\eeqn
+
+We can massage this to look like the beta-like integral form from the previous question by making the following substitution: let $u = e^{-x}$ which means $x = \natlog{u^{-1}}$ and $du/dx = -e^{-x} = -u$ and $dx = -u^{-1}du$. Now we need to ensure the new bounds are correct: if $x = -\infty$ then $u = \infty$ and if $x = \infty$ then $u = 0$.
+
+\beqn
+\phi_{X}(t) &=& \int_\infty^0 e^{it\natlog{u^{-1}}} \frac{u}{(1+u)^{2}} (-u^{-1})du \\
+ &=&  \int_0^\infty \frac{u^{-it}}{(1+u)^{2}} du = \int_0^\infty \frac{u^{(1-it)-1}}{(1+u)^{(1-it) + (1+it)}} du \\
+ &=& B(1-it, 1+it) = \frac{\Gamma(1-it)\Gamma(1+it)}{\Gamma(2)} = \Gamma(1-it)\Gamma(1+it)
+\eeqn
+
+}}{~\spc{8}}
+
+
+\end{enumerate}
+
+
+
+\end{document}
